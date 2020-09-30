@@ -6,7 +6,7 @@ body{
     background-color: black;
     color: blanchedalmond;
 }
-#leaderBoard{
+#seconds{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, serif;
     font-weight: bolder;
     color: honeydew;
@@ -20,4 +20,7 @@ body{
 }
 .container{
     text-align: center;
+}
+.hide{
+    display:none
 }

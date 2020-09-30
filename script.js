@@ -20,4 +20,22 @@
 var score = 0;
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('submit');
+var test = document.getElementById('test');
+var timer = document.getElementById('timer');
+var buttonContainer = document.getElementById('buttonContainer');
+
+function begin(){
+    // console.log("it works") 
+    buttonContainer.setAttribute("class", "hide")
+    var timerLogic = 60;
+    var timerInterval = setInterval(function(){
+        timerLogic--
+        timer.textContent = timerLogic
+        if(timerLogic <=0){
+            clearInterval(timerInterval)
+            alert("Time's Up!")
+        }
+    },1000)
+}
+test.addEventListener('click', begin)
 // var questions = 
