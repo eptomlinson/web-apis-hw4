@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+}
+
+#quiz{
+    background-color: black;
+    color: blanchedalmond;
+}
+#leaderBoard{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, serif;
+    font-weight: bolder;
+    color: honeydew;
+    background-color: hotpink; 
+}
+#popquiz{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, serif;
+    text-align: center;
+    color: honeydew;
+    background-color: hotpink;
+}
+.container{
+    text-align: center;
+}
