@@ -23,7 +23,8 @@ var resultsContainer = document.getElementById('submit');
 var test = document.getElementById('test');
 var timer = document.getElementById('timer');
 var buttonContainer = document.getElementById('buttonContainer');
-
+// var questions = 
+// tutor helped with begin function 
 function begin(){
     // console.log("it works") 
     buttonContainer.setAttribute("class", "hide")
@@ -38,4 +39,13 @@ function begin(){
     },1000)
 }
 test.addEventListener('click', begin)
+
+// function quiz(){
+//     var question1 = questions.
+//     if (condition) {
+        
+//     } else {
+        
+//     }
+// }
 // var questions = 
