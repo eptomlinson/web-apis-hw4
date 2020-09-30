@@ -23,7 +23,8 @@ var resultsContainer = document.getElementById('submit');
 var test = document.getElementById('test');
 var timer = document.getElementById('timer');
 var buttonContainer = document.getElementById('buttonContainer');
-// var questions = 
+var questionContainer = document.getElementById('questionContainer');
+// var correct answers 
 // tutor helped with begin function 
 function begin(){
     // console.log("it works") 
@@ -39,6 +40,17 @@ function begin(){
     },1000)
 }
 test.addEventListener('click', begin)
+// ***********************
+function nextQuestion(){
+    // if it matches one of the three wrong answers, move on with no point added
+    if (question1) {
+        // ask question 1 
+    } 
+    // doesn't match one of the three wrong answers, check against right answer. if right, add point to total, next question
+    else {
+        
+    }
+}
 
 // function quiz(){
 //     var question1 = questions.
