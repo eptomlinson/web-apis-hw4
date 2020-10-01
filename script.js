@@ -36,7 +36,7 @@ const myQuestions = [
             d: "Bugs Bunny"
         },
         correctAnswer: "d"
-    }
+    },
     {
         question: "What's the name of that weird movie where Joaquin Phoenix falls in love with a phone?",
         answers: {
@@ -46,7 +46,7 @@ const myQuestions = [
             d: "Sex and the City 2"
         },
         correctAnswer: "c"
-    }
+    },
     {
         question: "According to the Chinese zodiac, f you were born in the year 1980 you were born in the year of the:",
         answers: {
@@ -106,7 +106,7 @@ function buildQuiz() {
 
     myQuestions.forEach((currentQuestion, questionNumber) => {
         const answerContainer = answerContainers[questionNumber];
-      const selector = `input[name=question${questionNumber}]:checked`;
+        const selector = `input[name=question${questionNumber}]:checked`;
     });
 
     const answers = [];
