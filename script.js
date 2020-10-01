@@ -19,12 +19,14 @@
 // array starts - identify for loop  identify the var, i>x, x++. (doesn't have to be < symbol) use === to have a concrete True answer
 var score = 0;
 var quizContainer = document.getElementById('quiz');
-var resultsContainer = document.getElementById('submit');
+var resultsContainer = document.getElementById('results');
 var test = document.getElementById('test');
 var timer = document.getElementById('timer');
 var buttonContainer = document.getElementById('buttonContainer');
 var questionContainer = document.getElementById('questionContainer');
-// var correct answers 
+var questionArray = ["What is the capital of Vermont?", "Who sings Do You Believe in Life After Love?", "Who was Daffy Duck's nemesis?", "What's the name of that weird movie where Joaquin Phoenix falls in love with a phone?", "According to the Chinese zodiac, f you were born in the year 1980 you were born in the year of the:"]
+var answerArray = ["Montpelier", "Cher", "Bugs Bunny", "Her", "Monkey"]
+
 // tutor helped with begin function 
 function begin(){
     // console.log("it works") 
@@ -43,7 +45,8 @@ test.addEventListener('click', begin)
 // ***********************
 function nextQuestion(){
     // if it matches one of the three wrong answers, move on with no point added
-    if (question1) {
+    const output = [];
+    if () {
         // ask question 1 
     } 
     // doesn't match one of the three wrong answers, check against right answer. if right, add point to total, next question
@@ -52,7 +55,7 @@ function nextQuestion(){
     }
 }
 
-// function quiz(){
+// function results(){
 //     var question1 = questions.
 //     if (condition) {
         
