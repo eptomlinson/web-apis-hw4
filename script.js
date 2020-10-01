@@ -24,9 +24,6 @@ var test = document.getElementById('test');
 var timer = document.getElementById('timer');
 var buttonContainer = document.getElementById('buttonContainer');
 var questionContainer = document.getElementById('questionContainer');
-var questionArray = ["What is the capital of Vermont?", "Who sings Do You Believe in Life After Love?", "Who was Daffy Duck's nemesis?", "What's the name of that weird movie where Joaquin Phoenix falls in love with a phone?", "According to the Chinese zodiac, f you were born in the year 1980 you were born in the year of the:"]
-var answerArray = ["Montpelier", "Cher", "Bugs Bunny", "Her", "Monkey"]
-
 // tutor helped with begin function 
 function begin(){
     // console.log("it works") 
@@ -43,9 +40,60 @@ function begin(){
 }
 test.addEventListener('click', begin)
 // ***********************
+const myQuestions = [
+    {
+      question: "What is the capital of Vermont?",
+      answers: {
+        a: "Montpelier",
+        b: "Pittsburg",
+        c: "California",
+        d: "Mexico City"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "Who sings 'Do You Believe in Life After Love?'",
+      answers: {
+        a: "Ozzy Osbourne",
+        b: "Dio",
+        c: "Cher",
+        d: "Maroon 5"
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: "Who was Daffy Duck's nemesis?",
+      answers: {
+        a: "Tim Burton",
+        b: "Jon Quincy Adams",
+        c: "Reptar",
+        d: "Bugs Bunny"
+      },
+      correctAnswer: "d"
+    }
+    {
+        question: "What's the name of that weird movie where Joaquin Phoenix falls in love with a phone?",
+        answers: {
+            a: "It",
+            b: "She",
+            c: "Her",
+            d: "Sex and the City 2"
+        },
+        correctAnswer: "c"
+    }
+    {
+        question: "According to the Chinese zodiac, f you were born in the year 1980 you were born in the year of the:",
+        answers: {
+            a: "Snake",
+            b: "Monkey",
+            c: "Rat",
+            d: "Rhino"
+        },
+        correctAnswer: "b"
+    }
+  ];
 function nextQuestion(){
     // if it matches one of the three wrong answers, move on with no point added
-    const output = [];
     if () {
         // ask question 1 
     } 
