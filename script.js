@@ -2,54 +2,54 @@
 var score = 0;
 var quizContainer = document.getElementById('myQuestions');
 var resultsContainer = document.getElementById('results');
-var test = document.getElementById('test');
 var timer = document.getElementById('timer');
 var buttonContainer = document.getElementById('buttonContainer');
+var test = document.getElementById('test');
 var questionContainer = document.getElementById('questionContainer');
 const myQuestions = [
     {
         question: "What is the capital of Vermont?",
         answers: [
-            {a: "Montpelier", right: true},
-            {b: "Pittsburg", wrong: false},
-            {c: "California", wrong: false},
-            {d: "Mexico City", wrong: false}
+            { a: "Montpelier", right: true },
+            { b: "Pittsburg", wrong: false },
+            { c: "California", wrong: false },
+            { d: "Mexico City", wrong: false }
         ],
     },
     {
         question: "Who sings 'Do You Believe in Life After Love?'",
         answers: [
-            {a: "Ozzy Osbourne", wrong: false},
-            {b: "Dio", wrong: false},
-            {c: "Cher", right: true},
-            {d: "Maroon 5", wrong: false}
+            { a: "Ozzy Osbourne", wrong: false },
+            { b: "Dio", wrong: false },
+            { c: "Cher", right: true },
+            { d: "Maroon 5", wrong: false }
         ],
     },
     {
         question: "Who was Daffy Duck's nemesis?",
         answers: [
-            {a: "Tim Burton", wrong: false},
-            {b: "Jon Quincy Adams", wrong: false},
-            {c: "Reptar", wrong: false},
-            {d: "Bugs Bunny", right: true}
+            { a: "Tim Burton", wrong: false },
+            { b: "Jon Quincy Adams", wrong: false },
+            { c: "Reptar", wrong: false },
+            { d: "Bugs Bunny", right: true }
         ],
     },
     {
         question: "What's the name of that weird movie where Joaquin Phoenix falls in love with a phone?",
         answers: [
-            {a: "It", wrong: false},
-            {b: "She", wrong: false},
-            {c: "Her", right: true},
-            {d: "Sex and the City 2", wrong: false}
+            { a: "It", wrong: false },
+            { b: "She", wrong: false },
+            { c: "Her", right: true },
+            { d: "Sex and the City 2", wrong: false }
         ],
     },
     {
         question: "According to the Chinese zodiac, if you were born in the year 1980 you were born in the year of the:",
         answers: [
-            {a: "Snake", wrong: false},
-            {b: "Monkey", right: true},
-            {c: "Rat", wrong: false},
-            {d: "Rhino", wrong: false}
+            { a: "Snake", wrong: false },
+            { b: "Monkey", right: true },
+            { c: "Rat", wrong: false },
+            { d: "Rhino", wrong: false }
         ],
     }
 ];
