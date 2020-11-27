@@ -9,53 +9,48 @@ var questionContainer = document.getElementById('questionContainer');
 const myQuestions = [
     {
         question: "What is the capital of Vermont?",
-        answers: {
-            a: "Montpelier",
-            b: "Pittsburg",
-            c: "California",
-            d: "Mexico City"
-        },
-        correctAnswer: "a"
+        answers: [
+            {a: "Montpelier", right: true},
+            {b: "Pittsburg", wrong: false},
+            {c: "California", wrong: false},
+            {d: "Mexico City", wrong: false}
+        ],
     },
     {
         question: "Who sings 'Do You Believe in Life After Love?'",
-        answers: {
-            a: "Ozzy Osbourne",
-            b: "Dio",
-            c: "Cher",
-            d: "Maroon 5"
-        },
-        correctAnswer: "c"
+        answers: [
+            {a: "Ozzy Osbourne", wrong: false},
+            {b: "Dio", wrong: false},
+            {c: "Cher", right: true},
+            {d: "Maroon 5", wrong: false}
+        ],
     },
     {
         question: "Who was Daffy Duck's nemesis?",
-        answers: {
-            a: "Tim Burton",
-            b: "Jon Quincy Adams",
-            c: "Reptar",
-            d: "Bugs Bunny"
-        },
-        correctAnswer: "d"
+        answers: [
+            {a: "Tim Burton", wrong: false},
+            {b: "Jon Quincy Adams", wrong: false},
+            {c: "Reptar", wrong: false},
+            {d: "Bugs Bunny", right: true}
+        ],
     },
     {
         question: "What's the name of that weird movie where Joaquin Phoenix falls in love with a phone?",
-        answers: {
-            a: "It",
-            b: "She",
-            c: "Her",
-            d: "Sex and the City 2"
-        },
-        correctAnswer: "c"
+        answers: [
+            {a: "It", wrong: false},
+            {b: "She", wrong: false},
+            {c: "Her", right: true},
+            {d: "Sex and the City 2", wrong: false}
+        ],
     },
     {
-        question: "According to the Chinese zodiac, f you were born in the year 1980 you were born in the year of the:",
-        answers: {
-            a: "Snake",
-            b: "Monkey",
-            c: "Rat",
-            d: "Rhino"
-        },
-        correctAnswer: "b"
+        question: "According to the Chinese zodiac, if you were born in the year 1980 you were born in the year of the:",
+        answers: [
+            {a: "Snake", wrong: false},
+            {b: "Monkey", right: true},
+            {c: "Rat", wrong: false},
+            {d: "Rhino", wrong: false}
+        ],
     }
 ];
 // tutor helped with begin function 
