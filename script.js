@@ -68,6 +68,10 @@ function begin() {
     }, 1000)
 }
 test.addEventListener('click', begin)
+
+// test.addEventListener('click', function(){
+
+// })
 // ***********************
 // https://www.sitepoint.com/simple-javascript-quiz/ 
 function buildQuiz() {
