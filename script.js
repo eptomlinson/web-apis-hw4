@@ -73,7 +73,7 @@ function begin() {
         timer.textContent = timerLogic
         if (timerLogic <= 0 || currentState > myQuestions.length) {
             clearInterval(timerInterval)
-            alert("Time's Up!")
+            alert("Pencils Down!")
         }
     }, 1000)
     changeQuestion()
