@@ -6,51 +6,61 @@ var timer = document.getElementById('timer');
 var buttonContainer = document.getElementById('buttonContainer');
 var test = document.getElementById('test');
 var questionContainer = document.getElementById('questionContainer');
+var btnOne = document.querySelector("#buttonOne");
+var btnTwo = document.querySelector("#buttonTwo");
+var btnThree = document.querySelector("#buttonThree");
+var btnFour = document.querySelector("#buttonFour");
+let currentState = 0;
 const myQuestions = [
     {
         question: "What is the capital of Vermont?",
         answers: [
-            { a: "Montpelier", right: true },
-            { b: "Pittsburg", wrong: false },
-            { c: "California", wrong: false },
-            { d: "Mexico City", wrong: false }
+            "Montpelier",
+            "Pittsburg",
+            "California",
+            "Mexico City",
         ],
+        correctAnswer: "Montpelier"
     },
     {
         question: "Who sings 'Do You Believe in Life After Love?'",
         answers: [
-            { a: "Ozzy Osbourne", wrong: false },
-            { b: "Dio", wrong: false },
-            { c: "Cher", right: true },
-            { d: "Maroon 5", wrong: false }
+            "Ozzy Osbourne",
+            "Dio",
+            "Cher",
+            "Maroon 5",
         ],
+        correctAnswer: "Cher"
     },
     {
         question: "Who was Daffy Duck's nemesis?",
         answers: [
-            { a: "Tim Burton", wrong: false },
-            { b: "Jon Quincy Adams", wrong: false },
-            { c: "Reptar", wrong: false },
-            { d: "Bugs Bunny", right: true }
+            "Tim Burton",
+            "Jon Quincy Adams",
+            "Reptar",
+            "Bugs Bunny",
         ],
+        correctAnswer: "Bugs Bunny"
     },
     {
         question: "What's the name of that weird movie where Joaquin Phoenix falls in love with a phone?",
         answers: [
-            { a: "It", wrong: false },
-            { b: "She", wrong: false },
-            { c: "Her", right: true },
-            { d: "Sex and the City 2", wrong: false }
+            "It",
+            "She",
+            "Her",
+            "Sex and the City 2",
         ],
+        correctAnswer: "Her"
     },
     {
         question: "According to the Chinese zodiac, if you were born in the year 1980 you were born in the year of the:",
         answers: [
-            { a: "Snake", wrong: false },
-            { b: "Monkey", right: true },
-            { c: "Rat", wrong: false },
-            { d: "Rhino", wrong: false }
+            "Snake",
+            "Monkey",
+            "Rat",
+            "Rhino",
         ],
+        correctAnswer: "Monkey"
     }
 ];
 // tutor helped with begin function 
@@ -61,68 +71,38 @@ function begin() {
     var timerInterval = setInterval(function () {
         timerLogic--
         timer.textContent = timerLogic
-        if (timerLogic <= 0) {
+        if (timerLogic <= 0 || currentState > myQuestions.length) {
             clearInterval(timerInterval)
             alert("Time's Up!")
         }
     }, 1000)
+    changeQuestion()
 }
 test.addEventListener('click', begin)
 
 // test.addEventListener('click', function(){
+function changeQuestion() {
+    var chosenAnswer = this.textContent
+    if (chosenAnswer !== undefined) {
 
-// })
-// ***********************
-// https://www.sitepoint.com/simple-javascript-quiz/ 
-function buildQuiz() {
-    const output = [];
-
-    myQuestions.forEach(
-        (currentQuestion, questionNumber) => {
-
-            // variable to store the list of possible answers
-            const answers = [];
-
-            for (letter in currentQuestion.answers) {
-
-                answers.push(
-                    `<label>
-                        <input type="radio" name="question${questionNumber}" value="${letter}">
-                        ${letter} :
-                        ${currentQuestion.answers[letter]}
-                    </label>`
-                );
-            }
-
-            output.push(
-                `<div class="question"> ${currentQuestion.question} </div>
-        <div class="answers"> ${answers.join('')} </div>`
-            );
+        if (chosenAnswer == myQuestions[currentState - 1].correctAnswer) {
+            console.log("good")
+        } else {
+            console.log("bad")
         }
-    );
-
-    quizContainer.innerHTML = output.join('');
-
-    myQuestions.forEach((currentQuestion, questionNumber) => {
-        const answerContainer = answerContainers[questionNumber];
-        const selector = `input[name=question${questionNumber}]:checked`;
-    });
-
-    const answers = [];
-
-    for (letter in currentQuestion.answers) {
-        answers.push(
-            `<label>
-      <input type="radio" name="question${questionNumber}" value="${letter}">
-      ${letter} :
-      ${currentQuestion.answers[letter]}
-    </label>`
-        );
     }
-    output.push(
-        `<div class="question"> ${currentQuestion.question} </div>
-  <div class="answers"> ${answers.join('')} </div>`
-    );
+    if (currentState < myQuestions.length) {
+        quizContainer.textContent = myQuestions[currentState].question
+        btnOne.textContent = myQuestions[currentState].answers[0];
+        btnTwo.textContent = myQuestions[currentState].answers[1];
+        btnThree.textContent = myQuestions[currentState].answers[2];
+        btnFour.textContent = myQuestions[currentState].answers[3];
+    }
 
-    quizContainer.innerHTML = output.join('');
+    currentState++;
 }
+
+btnOne.addEventListener('click', changeQuestion);
+btnTwo.addEventListener('click', changeQuestion);
+btnThree.addEventListener('click', changeQuestion);
+btnFour.addEventListener('click', changeQuestion);

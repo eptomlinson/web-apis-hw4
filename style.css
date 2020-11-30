@@ -4,7 +4,7 @@ body{
 
 #quiz{
     background-color: black;
-    color: blanchedalmond;
+    color: #fff;
 }
 #seconds{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, serif;
@@ -15,12 +15,16 @@ body{
 #popquiz{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, serif;
     text-align: center;
-    color: honeydew;
+    color: #fff;
     background-color: hotpink;
 }
-.container{
+.quizContainer{
     text-align: center;
+    color: #fff;
 }
 .hide{
     display:none
+}
+#buttonContainer{
+    text-align: center;
 }
