@@ -108,8 +108,3 @@ btnOne.addEventListener('click', changeQuestion);
 btnTwo.addEventListener('click', changeQuestion);
 btnThree.addEventListener('click', changeQuestion);
 btnFour.addEventListener('click', changeQuestion);
-
-function storeCorrectAnswers(){
-    score++;
-    console.log(score);
- };
